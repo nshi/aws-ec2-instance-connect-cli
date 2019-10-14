@@ -192,7 +192,6 @@ def _parse_instance_bundles(instance_bundles):
                 # Since ssh prioritizes user@ over -l login_name, we will prioritize the target over the flag
                 # If we don't have the flag, we use the target anyways
                 bundle['instance_id'] = bundle['target']
-                bundle['target'] = None
 
         if len(bundle.get('username', '')) == 0:
             bundle['username'] = 'ec2-user'
